@@ -1,1 +1,1 @@
-Unsere erste Aufgabe auf GitHub
+Unser "Folder" für die Abgaben
