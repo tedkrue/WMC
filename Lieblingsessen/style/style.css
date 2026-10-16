@@ -1,0 +1,270 @@
+:root {
+  --cream: #fbf3e2;
+  --cream-2: #f3e6c6;
+  --ink: #2b2016;
+  --ink-soft: #5a4b39;
+  --gold: #b98a2e;
+  --olive: #45573a;
+  --line: #dfcb9c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero */
+header.hero {
+  padding: 96px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.kicker {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--olive);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  line-height: 1.02;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: clamp(220px, 40vw, 420px);
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 40px;
+  display: block;
+}
+
+.img-credit {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+.img-credit a {
+  color: var(--ink-soft);
+}
+
+.meta-row {
+  display: flex;
+  gap: 28px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-family: "Fraunces", serif;
+}
+
+.meta-item .num {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: block;
+}
+
+.meta-item .lbl {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* Section divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0 40px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.divider .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+section {
+  padding: 64px 0;
+}
+
+section + section {
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 28px;
+  color: var(--ink);
+}
+
+/* History */
+.history p {
+  max-width: 62ch;
+}
+.history p + p {
+  margin-top: 18px;
+}
+
+.pull {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--olive);
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+  margin: 32px 0;
+  max-width: 50ch;
+}
+
+/* Ingredients */
+.ingredient-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 36px;
+}
+
+.group h3 {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--olive);
+  margin: 0 0 14px;
+}
+
+.group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.group li {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.98rem;
+}
+
+.group li .qty {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* Steps */
+.steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 20px;
+  padding: 22px 0;
+}
+
+.steps li:not(:last-child) {
+  border-bottom: 1px solid var(--line);
+}
+
+.steps li::before {
+  content: counter(step);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.steps .step-title {
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* Notes */
+.notes {
+  background: var(--cream-2);
+  border-radius: 4px;
+  padding: 28px 32px;
+  max-width: 62ch;
+}
+
+.notes h2 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.notes ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.notes li + li {
+  margin-top: 8px;
+}
+
+footer {
+  padding: 40px 0 60px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  header.hero {
+    padding: 64px 0 40px;
+  }
+  section {
+    padding: 48px 0;
+  }
+}
