@@ -16,12 +16,11 @@ Diese Seite zeigt eine Schritt-für-Schritt-Anleitung zur Zubereitung von Chicke
 1. Repository klonen:
 
 ```bash
-   git clone https://github.com/DEIN-USERNAME/lieblingsessen.git
+   git clone https://github.com/tedkrue/WMC.git
 ```
 
-2. `index.html` im Browser öffnen
+2. Im Ordner `Lieblingsessen` die Datei `index.html` im Browser öffnen
 
-Oder die Live-Version besuchen: [lieblingsessen](https://DEIN-USERNAME.github.io/lieblingsessen/)
 
 ## 🍽️ Zutaten (kurzer Überblick)
 
